@@ -1,16 +1,15 @@
 import './App.css';
 import Product from './Product';
+import Container from './Container';
+
 
 function App() {
-
-  const productName = "buzdolabi";
-
   return (
-<div>
-  <Product productName = "ayakkabi" price = {3000} />
-  <Product productName = "telefon" price = {15000} />
-  <Product productName={productName} price = {30000} />
-</div>
+    <div>
+      <Container>
+        <Product productName="Ayakkabi" price={50000}/>
+      </Container>
+    </div>
   );
 }
 
