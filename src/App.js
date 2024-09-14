@@ -3,24 +3,26 @@ import './App.css';
 
 function App() {
 
+  // const [lastName, setLastName] = useState('Ozc')
   const [firstName, setFirstName] = useState('Mirz');
-  const [lastName, setLastName] = useState('Ozc')
-  // const [names, setNames] = useState(['A', 'B', 'C', 'D'])
+  const [names, setNames] = useState(['A', 'B', 'C', 'D'])
+  const [userInfo, setUserInfo] = useState({username: "mirz", password: "1212"})
+  const [show, setShow] = useState(false);
 
 
-  // console.log(names);
+  console.log(names);
 
-  const handleChange = () => {
-    setFirstName("Mirzorts");
-  }
+  // const handleChange = () => {
+  //   setFirstName("Mirzorts");
+  // }
 
   return (
     <div>
+      {names.map((name, index) => {
+        <div key={index}>{name}</div>
+      })}
       <div>
-        {firstName} 
-      </div>
-      <div> 
-        <button onClick={handleChange}>Change</button>
+        {userInfo.username} {userInfo.password}
       </div>
     </div>
   );
